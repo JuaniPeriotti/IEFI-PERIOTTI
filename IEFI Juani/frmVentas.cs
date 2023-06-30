@@ -26,8 +26,6 @@ namespace IEFI_Juani
             producto = txtProducto.Text;
             fecha = dtpVenta.Value.ToString("dd/MM/yyyy");
             cantidad = nmcCantidad.Value.ToString();
-
-            // CARGAMOS DATOS EN LA MATRIZ
             matrizVentas[indiceFila, 0] = id;
             matrizVentas[indiceFila, 1] = producto;
             matrizVentas[indiceFila, 2] = fecha;
