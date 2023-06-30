@@ -12,9 +12,7 @@ namespace IEFI_Juani
 {
     public partial class frmProductos : Form
     {
-        // CREAMOS MATRIZ DE PRODUCTOS
         string[,] matrizProductos = new string[10,3];
-        // CREAMOS VARIABLE PARA CONTROLAR EL INDICE DE LA FILA
         int indiceFila = 0;
 
         public frmProductos()
@@ -28,8 +26,6 @@ namespace IEFI_Juani
             id = nmcID.Value.ToString();
             nombre = txtNombre.Text;
             fecha = dtpRegistro.Value.ToString("dd/MM/yyyy");
-
-            // CARGAMOS DATOS EN LA MATRIZ
             matrizProductos[indiceFila, 0] = id;
             matrizProductos[indiceFila, 1] = nombre;
             matrizProductos[indiceFila, 2] = fecha;
@@ -38,7 +34,6 @@ namespace IEFI_Juani
             indiceFila = indiceFila + 1;
         }
 
-        // MUESTRO VALORES EN DGV
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
             dgvProductos.Rows.Clear();

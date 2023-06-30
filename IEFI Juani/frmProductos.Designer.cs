@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.tabProductos = new System.Windows.Forms.TabControl();
             this.tabRegistro = new System.Windows.Forms.TabPage();
             this.cmdRegistrar = new System.Windows.Forms.Button();
@@ -235,6 +236,7 @@
             this.ClientSize = new System.Drawing.Size(381, 424);
             this.Controls.Add(this.cmdListado);
             this.Controls.Add(this.tabProductos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";

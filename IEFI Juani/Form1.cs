@@ -19,8 +19,8 @@ namespace IEFI_Juani
 
         private void cmdProductos_Click(object sender, EventArgs e)
         {
-            frmProductos Prouctos = new frmProductos();
-            Prouctos.ShowDialog();
+            frmProductos Productos = new frmProductos();
+            Productos.ShowDialog();
         }
 
         private void cmdVentas_Click(object sender, EventArgs e)
