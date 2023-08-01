@@ -47,7 +47,7 @@
             this.rbtnProducto = new System.Windows.Forms.RadioButton();
             this.rbtnCantidad = new System.Windows.Forms.RadioButton();
             this.cmdConsultar = new System.Windows.Forms.Button();
-            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.dgvVentas = new System.Windows.Forms.DataGridView();
             this.columnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nmcID)).BeginInit();
             this.tabConsulta.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // tabProductos
@@ -205,7 +205,7 @@
             this.tabConsulta.BackColor = System.Drawing.SystemColors.GrayText;
             this.tabConsulta.Controls.Add(this.groupBox1);
             this.tabConsulta.Controls.Add(this.cmdConsultar);
-            this.tabConsulta.Controls.Add(this.dgvProductos);
+            this.tabConsulta.Controls.Add(this.dgvVentas);
             this.tabConsulta.Location = new System.Drawing.Point(4, 24);
             this.tabConsulta.Name = "tabConsulta";
             this.tabConsulta.Padding = new System.Windows.Forms.Padding(3);
@@ -281,21 +281,21 @@
             this.cmdConsultar.UseVisualStyleBackColor = true;
             this.cmdConsultar.Click += new System.EventHandler(this.cmdConsultar_Click);
             // 
-            // dgvProductos
+            // dgvVentas
             // 
-            this.dgvProductos.AllowUserToAddRows = false;
-            this.dgvProductos.AllowUserToDeleteRows = false;
-            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvVentas.AllowUserToAddRows = false;
+            this.dgvVentas.AllowUserToDeleteRows = false;
+            this.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnID,
             this.columnProducto,
             this.columnFecha,
             this.columnCantidad});
-            this.dgvProductos.Location = new System.Drawing.Point(6, 6);
-            this.dgvProductos.Name = "dgvProductos";
-            this.dgvProductos.ReadOnly = true;
-            this.dgvProductos.Size = new System.Drawing.Size(444, 288);
-            this.dgvProductos.TabIndex = 0;
+            this.dgvVentas.Location = new System.Drawing.Point(6, 6);
+            this.dgvVentas.Name = "dgvVentas";
+            this.dgvVentas.ReadOnly = true;
+            this.dgvVentas.Size = new System.Drawing.Size(444, 288);
+            this.dgvVentas.TabIndex = 0;
             // 
             // columnID
             // 
@@ -352,7 +352,7 @@
             this.tabConsulta.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,7 +372,7 @@
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.TabPage tabConsulta;
         private System.Windows.Forms.Button cmdConsultar;
-        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.DataGridView dgvVentas;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnFecha;

@@ -12,6 +12,7 @@ namespace IEFI_Juani
 {
     public partial class frmProductos : Form
     {
+        //CREO LA MATRIZ DE 10x3
         string[,] matrizProductos = new string[10,3];
         int indiceFila = 0;
 

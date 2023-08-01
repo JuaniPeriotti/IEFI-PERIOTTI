@@ -12,7 +12,9 @@ namespace IEFI_Juani
 {
     public partial class frmVentas : Form
     {
+        //CREAMOS LA MATRIZ DE 10x4 PARA ALAMCENAR CADENAS DE TEXTO
         string[,] matrizVentas = new string[10, 4];
+        //VARIABLE NUMERICA PARA CONTROLAR LA FILA A LA QUE ACCEDO
         int indiceFila = 0;
         public frmVentas()
         {
@@ -21,11 +23,13 @@ namespace IEFI_Juani
 
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
+            //CARGO LA MATRIZ CON LOS VALORES DE LAS SIGUIENTES VARIABLES
              string id, producto, fecha, cantidad;
             id = nmcID.Value.ToString();
             producto = txtProducto.Text;
             fecha = dtpVenta.Value.ToString("dd/MM/yyyy");
             cantidad = nmcCantidad.Value.ToString();
+            //ACCEDO A LA MATRIZ PARA ASIGNAR UN VALOR A CADA POSICION
             matrizVentas[indiceFila, 0] = id;
             matrizVentas[indiceFila, 1] = producto;
             matrizVentas[indiceFila, 2] = fecha;
@@ -37,6 +41,7 @@ namespace IEFI_Juani
 
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
+            //USO EL CICLO FOR PARA MOSTRAR LOS VALORES DE CADA FILA DE LA MATRIZ
             dgvProductos.Rows.Clear();
             for (int f = 0; f < matrizVentas.GetLength(0); f++)
             {
@@ -49,12 +54,14 @@ namespace IEFI_Juani
 
         private void cmdListado_Click(object sender, EventArgs e)
         {
+            //PASO LOS DATOS DE UN FORMULARIO A OTRO
             frmListado listado = new frmListado("Ventas", matrizVentas);
             listado.ShowDialog();
         }
 
         private void cmdFiltrar_Click(object sender, EventArgs e)
         {
+            //LIMPIO EL DGV PARA PODER CARGAR LOS ELEMENTOS, RESPETANDO LOS FILTROS
             dgvProductos.Rows.Clear();
             string producto;
             producto = txtFiltro.Text;
