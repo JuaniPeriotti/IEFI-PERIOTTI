@@ -34,7 +34,7 @@ namespace IEFI_Juani
             matrizVentas[indiceFila, 1] = producto;
             matrizVentas[indiceFila, 2] = fecha;
             matrizVentas[indiceFila, 3] = cantidad;
-
+            //MUESTRO QUE LOS DATOS SE ENVIARON AL DGV
             MessageBox.Show(matrizVentas[indiceFila, 1] + " se agrego correctamente.");
             indiceFila = indiceFila + 1;
         }
@@ -42,12 +42,12 @@ namespace IEFI_Juani
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
             //USO EL CICLO FOR PARA MOSTRAR LOS VALORES DE CADA FILA DE LA MATRIZ
-            dgvProductos.Rows.Clear();
+            dgvVentas.Rows.Clear();
             for (int f = 0; f < matrizVentas.GetLength(0); f++)
             {
                 if (matrizVentas[f, 0] != null)
                 {
-                    dgvProductos.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f, 3]);
+                    dgvVentas.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f, 3]);
                 }
             }
         }
@@ -62,7 +62,7 @@ namespace IEFI_Juani
         private void cmdFiltrar_Click(object sender, EventArgs e)
         {
             //LIMPIO EL DGV PARA PODER CARGAR LOS ELEMENTOS, RESPETANDO LOS FILTROS
-            dgvProductos.Rows.Clear();
+            dgvVentas.Rows.Clear();
             string producto;
             producto = txtFiltro.Text;
             if (rbtnCantidad.Checked)
@@ -71,7 +71,7 @@ namespace IEFI_Juani
                 {
                     if (matrizVentas[f, 3] != null && int.Parse(matrizVentas[f, 3]) > 10)
                     {
-                        dgvProductos.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f, 3]);
+                        dgvVentas.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f, 3]);
                     }
                 }
             }
@@ -82,7 +82,7 @@ namespace IEFI_Juani
                     if (matrizVentas[f, 1] != null && matrizVentas[f, 1] == producto)
                     {
                         MessageBox.Show(producto + "=" + matrizVentas[f, 1]);
-                        dgvProductos.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f, 3]);
+                        dgvVentas.Rows.Add(matrizVentas[f, 0], matrizVentas[f, 1], matrizVentas[f, 2], matrizVentas[f, 3]);
                     }
                 }
             }

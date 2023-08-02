@@ -12,10 +12,10 @@ namespace IEFI_Juani
 {
     public partial class frmProductos : Form
     {
-        //CREO LA MATRIZ DE 10x3
+        //CREAMOS LA MATRIZ DE 10x3 PARA ALAMCENAR CADENAS DE TEXTO
         string[,] matrizProductos = new string[10,3];
         int indiceFila = 0;
-
+        //VARIABLE NUMERICA PARA CONTROLAR LA FILA A LA QUE ACCEDO
         public frmProductos()
         {
             InitializeComponent();
@@ -23,6 +23,7 @@ namespace IEFI_Juani
 
         private void cmdRegistrar_Click(object sender, EventArgs e)
         {
+            //CARGO LA MATRIZ CON LOS VALORES DE LAS SIGUIENTES VARIABLES
             string id, nombre, fecha;
             id = nmcID.Value.ToString();
             nombre = txtNombre.Text;
@@ -30,13 +31,14 @@ namespace IEFI_Juani
             matrizProductos[indiceFila, 0] = id;
             matrizProductos[indiceFila, 1] = nombre;
             matrizProductos[indiceFila, 2] = fecha;
-
+            //MUESTRO QUE LOS DATOS SE ENVIARON AL DGV
             MessageBox.Show(matrizProductos[indiceFila, 1] + " se agrego correctamente.");           
             indiceFila = indiceFila + 1;
         }
 
         private void cmdConsultar_Click(object sender, EventArgs e)
         {
+            //USO EL CICLO FOR PARA MOSTRAR LOS VALORES DE CADA FILA DE LA MATRIZ
             dgvProductos.Rows.Clear();
             for (int f = 0; f < matrizProductos.GetLength(0); f++)
             {
@@ -49,6 +51,7 @@ namespace IEFI_Juani
 
         private void cmdListado_Click(object sender, EventArgs e)
         {
+            //PASO LOS DATOS DE UN FORMULARIO A OTRO
             frmListado listado = new frmListado("Productos", matrizProductos);
             listado.ShowDialog();
         }

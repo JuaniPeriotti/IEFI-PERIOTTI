@@ -37,6 +37,7 @@ namespace IEFI_Juani
 
         private void listarElementosMatriz(string[,] matriz)
         {
+            //REGISTRO LOS DATOS EN UN ListBox
             lstListado.Items.Clear();
             if (Operacion == "Productos")
             {
